@@ -3,16 +3,20 @@ class Menu
   attr_reader :dishes
 
   def initialize
-    @dishes = []
+    @dishes = [Dish.lasagne, Dish.spaghetti, Dish.pizza, Dish.veal]
   end
 
-  def add(dish)
-    dishes << dish
+  def dishes_count
+    @dishes.count
   end
 
-  def remove(dish)
-    dishes.delete(dish)
-  end
+  # def add(dish)
+  #   dishes << dish
+  # end
+
+  # def remove(dish)
+  #   dishes.delete(dish)
+  # end
 
 end
 
