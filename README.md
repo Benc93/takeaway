@@ -17,9 +17,11 @@ Implement the following functionality:
 
 ##Analysis
    
-Based on the briefing - I identified the following classes: **Dish**, **Line_Item**, **Menu*, **Order**, **Customer**, **Restaurant**. 
+Based on the briefing - I identified the following classes: **Dish**, **Line_Item**, **Menu**, **Order**, **Customer**, **Restaurant**. 
 
-The classes build up from dishes (taken from the menu), into a line item, into an order. The order compiled under the Customer class (built up using the Line Item class - where the correct totals are checked). The Customer sends the complete order to the Restaurant. At that point the Restaurant can send a text message to the customer as one of it's methods (in fact - the only method for the restaurant).
+The structure builds up from Dish class (given from the Menu class), into a Line Item, into an Order. The Order is compiled by the Customer class (built up using the Line Item class - where the correct totals are checked). The Customer sends the complete order to the Restaurant. At that point the Restaurant can send a text message to the customer as one of it's methods (in fact - the only method for the restaurant).
+
+
 
 
 
