@@ -1,6 +1,6 @@
 class LineItem
 
-  attr_reader :dish, :quantity 
+  attr_accessor :dish, :quantity 
 
   def initialize(dish, quantity)
     @dish     = dish

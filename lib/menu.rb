@@ -10,13 +10,5 @@ class Menu
     @dishes.count
   end
 
-  # def add(dish)
-  #   dishes << dish
-  # end
-
-  # def remove(dish)
-  #   dishes.delete(dish)
-  # end
-
 end
 
