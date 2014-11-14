@@ -1,6 +1,6 @@
 #End of Week 2 Challenge (Part 2) - Takeaway
    
-##Breifing
+##Briefing
    
 Write a Takeaway app.  
    
