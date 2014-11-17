@@ -1,6 +1,5 @@
 class Restaurant
 
-  # require 'rubygems' 
   require 'twilio-ruby' 
 
   attr_accessor :order

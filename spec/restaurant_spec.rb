@@ -1,5 +1,4 @@
 require 'restaurant'
-require 'webmock/rspec'
 
   describe 'restaurant' do 
 
