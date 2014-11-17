@@ -14,19 +14,25 @@ class Restaurant
     end
 
  
-    def send_message 
+    def send_message
 
-    time = Time.now + (60 * 60)
+      if received_order?
 
-    account_sid = ENV['ACCOUNT_SID']
-    auth_token = ENV['AUTH_TOKEN']
-    @client = Twilio::REST::Client.new account_sid, auth_token 
-     
-    @client.account.messages.create({
-      :from => ENV['MY_TWILIO'], 
-      :to => ENV['MY_CELL'], 
-      :body => 'Thanks! Your order will be delivered by #{time.strftime("%H:%M")',  
-    })
+      time = Time.now + (60 * 60)
+
+      account_sid = ENV['ACCOUNT_SID']
+      auth_token = ENV['AUTH_TOKEN']
+      @client = Twilio::REST::Client.new account_sid, auth_token 
+       
+      @client.account.messages.create(:body => "Thanks! Your order will be delivered by #{time.strftime("%R")}",
+        :from => ENV['MY_TWILIO'], 
+        :to => ENV['MY_CELL'])
+
+      "Message Sent"
+
+      else "No order to confirm"
+
+      end
 
     end
 
