@@ -20,8 +20,6 @@ describe 'customer' do
   end
 
   it 'can submit an order to restaurant' do 
-    customer.add_to_order(Dish.lasagne, 2, 18)
-    expect(customer.order.count).to eq 1
     customer.send_order(restaurant)
     expect(customer.order).to eq nil
     expect(restaurant.order.count).to eq 1

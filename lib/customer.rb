@@ -1,8 +1,7 @@
 class Customer
 
-  attr_reader :number
-  attr_reader :name
-  attr_accessor :order
+  attr_reader :number, :name
+  attr_reader :order
 
   def initialize(name, number)
     @name      = name
@@ -13,12 +12,8 @@ class Customer
   def add_to_order(dish, quantity, total)
     line_item     = LineItem.new(dish, quantity)
     alleged_total = total 
-      
-      if placed_good_order?(line_item, alleged_total)
-        order.add(line_item)
-      else 
-        puts "Invalid order, please submit again"
-      end
+    raise "Invalid order, please submit again" unless placed_good_order?(line_item, total)
+    order.add(line_item)
   end
 
   def placed_good_order?(line_item, alleged_total)

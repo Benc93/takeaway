@@ -1,21 +1,20 @@
+require 'twilio-ruby' 
+
 class Restaurant
 
-  require 'twilio-ruby' 
+  attr_reader :order
 
-  attr_accessor :order
+  def initialize
+    @order = []
+  end
 
-    def initialize
-      @order = []
-    end
+  def received_order?
+    order != []
+  end
 
-    def received_order?
-      order != []
-    end
+  def send_message
 
- 
-    def send_message
-
-      if received_order?
+    if received_order?
 
       time = Time.now + (60 * 60)
 
@@ -29,10 +28,10 @@ class Restaurant
 
       "Message Sent"
 
-      else "No order to confirm"
-
-      end
-
+    else 
+      "No order to confirm"
     end
+
+  end
 
 end
