@@ -1,17 +1,13 @@
-#End of Week 2 Challenge (Part 2) - Takeaway
+#Makers Academy End of Week 2 Challenge (Part 2 of 2) - Takeaway
+
+![takeaway_bag](https://cloud.githubusercontent.com/assets/9297921/5602654/47297abe-9355-11e4-910c-16a129ce5195.png)
    
-###Programs, Languages, Technologies employed.  
-
-+ Ruby
-+ Rspec
-+ Sublime Text
-+ Terminal
-+ Twilio
-+ Github
-+ Webmock
-
+####New Programs, Languages, Technologies employed.  
     
-##Briefing
++ Twilio
++ Webmock
+    
+###Briefing
    
 Write a Takeaway app.  
    
@@ -38,7 +34,13 @@ I decided to fulfil the condition of checking a customer's alleged price at the 
 
 The structure builds up from Dish class (given from the Menu class), into a Line Item, into an Order. The Order is compiled by the Customer class (built up using the Line Item class - where the correct totals are checked). The Customer sends the complete order to the Restaurant. At that point the Restaurant can send a text message to the customer as one of it's methods (in fact - the only method for the restaurant).
 
-
+####Lessons Learned
+    
+The Challenge served to reinforce quite a number of the techniques we'd learned to date (**TDD, Ruby methods, doubles**). The new element to the challenge was the integration of the **Twilio API** to send order confirmations via SMS. 
+    
+This was quite a tricky implementation that involved an awful lot of trial and error (and frustration!). Once the text messages started firing - it was hard to turn them off during for testing purposes, which was part of the brief. I got there eventually, but it certainly didn't feel as straight forward as the first part of the challenge!
+     
+    
 **END*
 
 
